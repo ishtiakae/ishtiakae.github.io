@@ -309,3 +309,50 @@ img{
     margin-right: var(--mb-2);
     color: var(--first-color);
 }
+.skills__names{
+    display: flex;
+    align-items: center;
+}
+
+.skills__bar{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--first-color);
+    height: .25rem;
+    border-radius: .5rem;
+    z-index: var(--z-back);
+}
+.skills__html{
+    width: 80%;
+}
+
+.skills__css{
+    width: 70%;
+}
+.skills__js{
+    width: 10%;
+}
+.skills__ui{
+    width: 30%;
+}
+
+.skills__img{
+    border-radius: .5rem;
+
+}
+
+.work{
+    text-align: center;
+
+}
+.work__container{
+    row-gap: 2rem;
+}
+
+.work__img{
+    box-shadow: 0 4px 25px rgba(14,36,49,.15);
+    border-radius: .5rem;
+    overflow: hidden;
+}
+
