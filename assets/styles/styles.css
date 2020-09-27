@@ -12,7 +12,13 @@
   --second-color: #0E2431;
 }
 
-
+/*
+.dark{
+  --second-color: #cecece;
+  background-color: #292929;
+  
+}
+*/
 :root{
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem;
@@ -341,7 +347,7 @@ img{
 
 
 .footer{
-  background-color: var(--second-color);
+  background-color: #0E2431;
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
