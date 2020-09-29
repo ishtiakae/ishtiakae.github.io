@@ -16,12 +16,12 @@ const navLink = document.querySelectorAll('.nav__link');
 
 function linkAction(){
 
-  navLink.forEach(n => n.classList.remove('active'));
-  this.classList.add('active');
-  
+    navLink.forEach(n => n.classList.remove('active'));
+    this.classList.add('active');
 
-  const navMenu = document.getElementById('nav-menu')
-  navMenu.classList.remove('show')
+
+    const navMenu = document.getElementById('nav-menu')
+    navMenu.classList.remove('show')
 }
 navLink.forEach(n => n.addEventListener('click', linkAction));
 
@@ -33,6 +33,73 @@ const sr = ScrollReveal({
     reset: false
 });
 
+
+
+
+
+let mouseCursor = document.querySelector('.cursor');
+
+let navlinks = document.querySelectorAll('.nav__link')
+
+let social = document.querySelectorAll('.home__social-icon');
+
+let fsocial = document.querySelectorAll('.footer__icon');
+
+let button = document.querySelectorAll('.button');
+
+
+window.addEventListener('mousemove', cursor);
+function cursor(e){
+    mouseCursor.style.top = e.pageY + 'px';
+    mouseCursor.style.left = e.pageX + 'px';
+}
+
+navlinks.forEach(link =>{
+    link.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('link__grow')
+        link.classList.remove('hovered__nav')
+    })
+    link.addEventListener('mouseover', () => {
+        mouseCursor.classList.add('link__grow')
+        link.classList.add('hovered__nav')
+    })
+});
+
+
+social.forEach(link =>{
+    link.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('link__grow')
+        link.classList.remove('hovered__nav')
+    })
+    link.addEventListener('mouseover', () => {
+        mouseCursor.classList.add('link__grow')
+        link.classList.add('hovered__nav')
+    })
+});
+
+fsocial.forEach(link =>{
+    link.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('link__grow')
+        link.classList.remove('hovered__nav')
+    })
+    link.addEventListener('mouseover', () => {
+        mouseCursor.classList.add('link__grow')
+        link.classList.add('hovered__nav')
+    })
+});
+
+
+
+button.forEach(link =>{
+    link.addEventListener('mouseleave', () => {
+        mouseCursor.classList.remove('link__grow')
+        link.classList.remove('hovered__nav')
+    })
+    link.addEventListener('mouseover', () => {
+        mouseCursor.classList.add('link__grow')
+        link.classList.add('hovered__nav')
+    })
+});
 
 sr.reveal('.home__title',{}); 
 sr.reveal('.button',{delay: 200}); 
@@ -55,3 +122,5 @@ sr.reveal('.work__img',{interval: 200});
 
 
 sr.reveal('.contact__input',{interval: 200}); 
+
+
